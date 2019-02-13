@@ -92,6 +92,7 @@ public final class Train {
     }
     
     public int findTrackTimeMovingSec(){
+        try{
         int trackTimeMovingInt=0;
         for (int i =1 ;i<arrayList.size();i++) {
             if (Integer.parseInt(arrayList.get(i)[11])!=
@@ -99,6 +100,10 @@ public final class Train {
                 trackTimeMovingInt++;
         }
         return trackTimeMovingInt;
+        } 
+        catch (Exception e){
+            return -1;
+        }
     }
     
     
